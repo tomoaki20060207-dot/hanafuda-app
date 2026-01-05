@@ -187,7 +187,7 @@ def show_rules_screen():
 
 # --- 画面関数: スタート画面 ---
 def show_start_screen():
-    st.title("🎴 花合わせ計算ツール")
+    st.title("🎴 花札（花合わせ）得点計算ツール")
     st.markdown("""
     <div style="font-size: 14px; color: gray; margin-bottom: 20px;">
     ルール参照： <a href="https://www.nintendo.com/jp/others/hanafuda_kabufuda/howtoplay/hanaawase/index.html" target="_blank">任天堂「花合わせ」公式サイト</a>
@@ -332,6 +332,7 @@ elif st.session_state.page == 'rules_screen':
     show_rules_screen()
 elif st.session_state.page == 'game_screen':
     show_game_screen()
+
 
 
 
