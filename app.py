@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 # --- ページ設定 ---
-st.set_page_config(page_title="花合わせ計算ツール", page_icon="🎴", layout="wide")
+st.set_page_config(page_title="花札（花合わせ）得点採点ツール", page_icon="🎴", layout="wide")
 
 # --- CSSでの見た目調整（ボタンの大きさなど） ---
 st.markdown("""
@@ -357,4 +357,5 @@ elif st.session_state.page == 'rules_screen':
     show_rules_screen()
 elif st.session_state.page == 'game_screen':
     show_game_screen()
+
 
