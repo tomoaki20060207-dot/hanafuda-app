@@ -256,13 +256,14 @@ def show_game_screen():
                              if current_sel in options:
                                 default_idx = options.index(current_sel)
                         
-                        # st.pills を使用して四角いボタン状にする
-                        selection = st.pills(
+                      # st.radio に戻す（古いバージョン対応）
+                        selection = st.radio(
                             f"{name}の所有者",
                             options,
                             index=default_idx,
-                            key=f"pills_{id_}", # キーを変更
+                            key=f"radio_{id_}", # キーを一応変更
                             label_visibility="collapsed",
+                            horizontal=True # 横並びにする
                         )
                         st.session_state.selections[id_] = selection
 
@@ -331,5 +332,6 @@ elif st.session_state.page == 'rules_screen':
     show_rules_screen()
 elif st.session_state.page == 'game_screen':
     show_game_screen()
+
 
 
